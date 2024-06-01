@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    flex-direction: column;
+    background: url('wp8984722.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+#info {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+#scores {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    background-color: lightgrey;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#gameboard{
+    margin-bottom: 90px;
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px black;
+    border-radius: 5px;
+}
+#timer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+#new-game {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-game:hover {
+    background-color: moccasin;
+    transform: scale(1.1);
+}
+
+.square {
+    width:200px;
+    height: 200px;
+    background-color: white;
+    border: solid 2px black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    height: 190px;
+    width:190px;
+    border-radius: 50%;
+    border: 15px solid gray;
+    box-sizing: border-box;
+}
+.cross{
+    height: 190px;
+    width: 190px;
+    position: relative;
+    transform: rotate(45deg)
+}
+.cross:before, .cross:after{
+    content: '';
+    position: absolute;
+    background-color: lightgrey;
+}
+.cross:before {
+    left:50%;
+    width: 30%;
+    height:100%;
+    margin-left : -15%;
+}
+.cross:after {
+    top: 50%;
+    height: 30%;
+    width: 100%;
+    margin-top: -15%;
+}
+.highlight {
+    background-color: moccasin;
+}
